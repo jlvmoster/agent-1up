@@ -1,0 +1,28 @@
+# Command rules equivalent to the Claude Code Bash allow-list:
+# - Bash(git *)
+# - Bash(uv *)
+# - Bash(uvx *)
+
+prefix_rule(
+    pattern = ["git"],
+    decision = "allow",
+    justification = "Git commands are part of the standard Python stack workflow.",
+    match = ["git status", "git diff --stat"],
+    not_match = ["uv sync", "uvx ruff check"],
+)
+
+prefix_rule(
+    pattern = ["uv"],
+    decision = "allow",
+    justification = "uv is the package and project manager for this stack.",
+    match = ["uv sync", "uv add pytest --dev"],
+    not_match = ["uvx ruff check", "git status"],
+)
+
+prefix_rule(
+    pattern = ["uvx"],
+    decision = "allow",
+    justification = "uvx is used to run Python tools without installing them.",
+    match = ["uvx ruff check", "uvx ty check"],
+    not_match = ["uv sync", "git status"],
+)
