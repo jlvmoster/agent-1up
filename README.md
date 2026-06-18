@@ -18,7 +18,7 @@ Reusable agent skills — drop into a project's `skills/` directory.
 
 | Skill | Does | Use it when |
 | --- | --- | --- |
-| [lazyboy](skills/lazyboy/SKILL.md) | Forces the laziest solution that actually works — simplest, shortest, most minimal, without becoming negligent. | You want an agent to stop over-engineering (YAGNI, KISS, rule of three, fewest files). |
+| [lazyboy](skills/lazyboy/SKILL.md) | Forces the laziest solution that actually works — simplest, shortest, most minimal, without becoming negligent. Based on [ponytail](https://github.com/DietrichGebert/ponytail) by DietrichGebert (MIT; see [third-party notices](THIRD_PARTY_NOTICES.md)). | You want an agent to stop over-engineering (YAGNI, KISS, rule of three, fewest files). |
 
 ## How to use a stack
 
