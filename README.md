@@ -12,6 +12,14 @@ Each stack includes agent instructions plus tool-specific config so a project ca
 | --- | --- | --- |
 | [Python](stacks/python/README.md) | `CLAUDE.md`, `.claude/settings.json`, `AGENTS.md`, `.codex/config.toml`, `.codex/rules/default.rules` | You want `uv`, `ruff`, and `ty` defaults for Python projects. |
 
+## Skills
+
+Reusable agent skills — drop into a project's `skills/` directory.
+
+| Skill | Does | Use it when |
+| --- | --- | --- |
+| [lazyboy](skills/lazyboy/SKILL.md) | Forces the laziest solution that actually works — simplest, shortest, most minimal, without becoming negligent. | You want an agent to stop over-engineering (YAGNI, KISS, rule of three, fewest files). |
+
 ## How to use a stack
 
 1. Open the stack README.
