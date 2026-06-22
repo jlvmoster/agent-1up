@@ -14,9 +14,12 @@ Reusable skills and a curated Claude Code setup for building agent tooling with 
 | [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Maintain and improve `CLAUDE.md` files — audit quality, capture session learnings, keep project memory current. |
 | [plugin-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev) | Develop Claude Code plugins — expert skills for hooks, MCP integration, commands, agents, and validation. |
 | [skill-creator](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, improve, and benchmark agent skills, including evals and variance analysis. |
-| [superpowers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) | Workflow discipline — brainstorming, subagent-driven development, systematic debugging, and red/green TDD. |
 
 All plugins come from the official [`claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) marketplace.
+
+### Recommended user-scope plugin
+
+[`superpowers`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) — workflow discipline (brainstorming, subagent-driven development, systematic debugging, and red/green TDD) — is best enabled at **user scope** rather than per-repo, so it applies across all your projects. Enable it from the official marketplace with `/plugin`.
 
 ## Skills
 
