@@ -2,15 +2,21 @@
 
 # A 1-Up for your coding agents.
 
-Drop-in starter kits for pairing coding agents with practical stack conventions.
+Reusable skills and a curated Claude Code setup for building agent tooling with practical conventions.
 
-Each stack includes agent instructions plus tool-specific config so a project can start with the same defaults across Claude Code and Codex.
+## Claude Code setup
 
-## Available stacks
+[`.claude/settings.json`](.claude/settings.json) enables a curated bundle of official Claude Code plugins for authoring and maintaining agent tooling — skills, plugins, `CLAUDE.md` files, and project config. Claude Code reads it automatically when you start an agent from the repo root.
 
-| Stack | Includes | Use it when |
-| --- | --- | --- |
-| [Python](stacks/python/README.md) | `CLAUDE.md`, `.claude/settings.json`, `AGENTS.md`, `.codex/config.toml`, `.codex/rules/default.rules` | You want `uv`, `ruff`, and `ty` defaults for Python projects. |
+| Plugin | Does |
+| --- | --- |
+| [claude-code-setup](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) | Analyze a codebase and recommend tailored Claude Code automations — hooks, skills, MCP servers, and subagents. |
+| [claude-md-management](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management) | Maintain and improve `CLAUDE.md` files — audit quality, capture session learnings, keep project memory current. |
+| [plugin-dev](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev) | Develop Claude Code plugins — expert skills for hooks, MCP integration, commands, agents, and validation. |
+| [skill-creator](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator) | Create, improve, and benchmark agent skills, including evals and variance analysis. |
+| [superpowers](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/superpowers) | Workflow discipline — brainstorming, subagent-driven development, systematic debugging, and red/green TDD. |
+
+All plugins come from the official [`claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) marketplace.
 
 ## Skills
 
@@ -20,11 +26,8 @@ Reusable agent skills — drop into a project's `skills/` directory.
 | --- | --- | --- |
 | [lazyboy](skills/lazyboy/SKILL.md) | Forces the laziest solution that actually works — simplest, shortest, most minimal, without becoming negligent. Based on [ponytail](https://github.com/DietrichGebert/ponytail) by DietrichGebert (MIT; see [third-party notices](THIRD_PARTY_NOTICES.md)). | You want an agent to stop over-engineering (YAGNI, KISS, rule of three, fewest files). |
 
-## How to use a stack
+## How to use
 
-1. Open the stack README.
-2. Copy the files for your agent workflow into the root of your project.
-3. Adjust any project-specific commands, permissions, or plugins.
-4. Start your agent from the project root so it can discover the instructions and config.
-
-For the Python starter kit, use [stacks/python/README.md](stacks/python/README.md).
+1. Start a coding agent from the repo root so it discovers `.claude/settings.json` and the bundled skills.
+2. Approve the plugin marketplace and enabled plugins when Claude Code prompts you.
+3. Drop individual skills (like [`skills/lazyboy`](skills/lazyboy/SKILL.md)) into another project's `skills/` directory as needed.
