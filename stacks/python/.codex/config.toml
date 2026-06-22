@@ -1,8 +1,0 @@
-# Codex project config for the Python stack starter kit.
-# Codex loads project-local .codex config only after the project is trusted.
-
-approval_policy = "on-request"
-default_permissions = ":workspace"
-
-# Claude Code plugin marketplace settings do not have a direct Codex config
-# equivalent. Install Codex plugins separately with `codex plugin` when needed.
